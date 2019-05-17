@@ -21,8 +21,8 @@ SRC_URI += "file://defconfig"
 SRC_URI += "file://0001-Drop-using-_-in-version.patch"
 
 python __anonymous () {
-	if d.getVar('UBOOT_FIT_IMAGE', True) == 'xyes':
-		d.appendVar('DEPENDS', ' u-boot-mkimage-native dtc-native')
+    if d.getVar('UBOOT_FIT_IMAGE', True) == 'xyes':
+        d.appendVar('DEPENDS', ' u-boot-mkimage-native dtc-native')
 }
 
 do_deploy_append() {
